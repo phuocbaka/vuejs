@@ -35,14 +35,7 @@
         </a>
       </li>
       <br>
-      <li>
-        <a
-          href="#"
-          target="_blank"
-        >
-         
-        </a>
-      </li>
+
     </ul>
     
   </div>
@@ -65,14 +58,63 @@ export default {
 h1, h2 {
   font-weight: normal;
 }
-ul {
+ul{
+	display: flex;
+	width: 100%;
+	margin: auto;
+	max-width: 1000px;
+	justify-content: space-between;
+	text-align: center;
   padding: 0;
-  text-decoration: none;
+  list-style: none;
 }
 li {
-  display: inline-block;
-  margin: 0 10px;
+	padding: 1rem 2rem 1.15rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #ebebeb;
+	min-width: 80px;
+	margin: auto;
+}
 
+li:hover {
+  background-image: url('http://scottyzen.com/cp/button.png');
+  background-size: 100% 100%;
+  color: #000;
+  animation: spring 300ms ease-out;
+  text-shadow: 0 -1px 0 #ef816c;
+	font-weight: bold;
+}
+li:active {
+  transform: translateY(4px);
+}
+
+@keyframes spring {
+  15% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1.2, 1.1);
+  }
+  40% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(0.95, 0.95);
+  }
+  75% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1.05, 1);
+  }
+  100% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1, 1);
+  }
+}
+
+.shameless-plug{
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  padding: 8px 20px;
+  color: #ccc;
+  text-decoration: none;
 }
 a {
   color: #000;
